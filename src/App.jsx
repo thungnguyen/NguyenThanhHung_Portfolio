@@ -13,7 +13,7 @@ import { translations } from './translations';
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [theme, setTheme] = useState('light'); // default is light ("yêu cầu màu sắc sáng")
-  const [lang, setLang] = useState('vi'); // default is vi
+  const [lang, setLang] = useState('en'); // default is en
 
   useEffect(() => {
     // Sync theme class to html/body elements
@@ -53,7 +53,7 @@ function App() {
             key="loader"
             initial={{ opacity: 1 }}
             exit={{ opacity: 0, transition: { duration: 0.5, ease: 'easeInOut' } }}
-            className="fixed inset-0 bg-[#090d16] z-[9999] flex flex-col items-center justify-center"
+            className="fixed inset-0 bg-[#0f172a] z-[9999] flex flex-col items-center justify-center"
           >
             {/* Glowing H */}
             <motion.div
@@ -91,7 +91,7 @@ function App() {
 
       {/* Main Layout */}
       {!isLoading && (
-        <div className="flex flex-col min-h-screen bg-slate-50 dark:bg-[#090d16] text-slate-800 dark:text-gray-200 transition-colors duration-300 selection:bg-accentTeal/30 selection:text-accentTeal scroll-smooth">
+        <div className="flex flex-col min-h-screen bg-slate-50 dark:bg-darkBg text-slate-800 dark:text-gray-200 transition-colors duration-300 selection:bg-accentTeal/30 selection:text-accentTeal scroll-smooth">
           <Navbar 
             lang={lang} 
             theme={theme} 

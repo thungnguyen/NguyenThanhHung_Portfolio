@@ -8,8 +8,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        darkBg: '#090d16',      // Deep space dark background
-        darkCard: '#111827',    // Sleek dark card
+        darkBg: '#0f172a',      // Soothing slate-900 background
+        darkCard: '#1e293b',    // Soothing slate-800 card
         accentTeal: '#06b6d4',  // Cyan/teal accent
         accentIndigo: '#6366f1',// Indigo accent
       },
