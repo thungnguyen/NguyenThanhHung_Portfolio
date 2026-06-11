@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, ExternalLink, Cpu, Database, Server, Sparkles, CheckSquare } from 'lucide-react';
+import { Github, CheckSquare } from 'lucide-react';
 
 const Projects = ({ lang, t }) => {
   const containerVariants = {
@@ -52,33 +52,42 @@ const Projects = ({ lang, t }) => {
               
               <div className="space-y-6">
                 {/* Card Title Header */}
-                <div className="flex justify-between items-start gap-4">
-                  <div className="space-y-1">
-                    <span className="text-[10px] font-bold text-accentTeal tracking-widest uppercase bg-accentTeal/10 px-2 py-0.5 rounded">
-                      {lang === 'vi' ? `Dự án ${idx + 1}` : `Project ${idx + 1}`}
-                    </span>
-                    <h3 className="font-display font-bold text-xl sm:text-2xl text-slate-800 dark:text-white group-hover:text-accentTeal transition-colors duration-350 mt-1">
+                <div className="flex justify-between items-start gap-4 flex-wrap">
+                  <div className="space-y-2">
+                    {/* Card Highlight Tags */}
+                    <div className="flex flex-wrap gap-1.5">
+                      {project.highlights.map((hl, hlIdx) => (
+                        <span
+                          key={hlIdx}
+                          className="px-2 py-0.5 rounded text-[9px] font-extrabold bg-accentTeal/10 dark:bg-accentTeal/20 text-accentTeal dark:text-cyan-300 uppercase tracking-wider whitespace-nowrap"
+                        >
+                          {hl}
+                        </span>
+                      ))}
+                    </div>
+                    
+                    <h3 className="font-display font-bold text-xl sm:text-2xl text-slate-800 dark:text-white group-hover:text-accentTeal transition-colors duration-300 mt-1">
                       {project.title}
                     </h3>
                   </div>
-                  <span className="text-sm font-bold text-slate-500 dark:text-gray-500 font-display shrink-0 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/5 px-2.5 py-1 rounded-lg">
-                    {project.year}
+                  <span className="text-xs font-bold text-slate-500 dark:text-gray-500 font-display shrink-0 bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-white/10 px-2.5 py-1 rounded-lg">
+                    {project.team}
                   </span>
                 </div>
 
                 {/* Description */}
-                <p className="text-slate-650 dark:text-gray-400 text-sm sm:text-base leading-relaxed">
+                <p className="text-slate-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed">
                   {project.description}
                 </p>
 
-                {/* Technical highlights */}
+                {/* Contributions */}
                 <div className="space-y-3">
                   <span className="text-xs font-bold text-slate-700 dark:text-gray-300 uppercase tracking-wider block">
                     {t.projects.featuresTitle}
                   </span>
                   <ul className="space-y-2.5">
                     {project.features.map((feat, fIdx) => (
-                      <li key={fIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-650 dark:text-gray-305 dark:text-gray-300 leading-relaxed">
+                      <li key={fIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-600 dark:text-gray-300 leading-relaxed">
                         <CheckSquare className="w-4 h-4 text-accentTeal shrink-0 mt-0.5" />
                         <span>{feat}</span>
                       </li>
@@ -93,7 +102,7 @@ const Projects = ({ lang, t }) => {
                   {project.tech.map((t, tIdx) => (
                     <span
                       key={tIdx}
-                      className="px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/5 text-slate-550 dark:text-gray-400"
+                      className="px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-white/10 text-slate-500 dark:text-gray-400"
                     >
                       {t}
                     </span>

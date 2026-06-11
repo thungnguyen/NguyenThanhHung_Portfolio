@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowUpRight, Sun, Moon, Globe, Code } from 'lucide-react';
+import { Menu, X, ArrowUpRight, Sun, Moon, Globe } from 'lucide-react';
+import BrandLogo from './BrandLogo';
 
 const Navbar = ({ lang, theme, toggleTheme, toggleLanguage, t }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -72,15 +73,13 @@ const Navbar = ({ lang, theme, toggleTheme, toggleLanguage, t }) => {
             onClick={(e) => handleLinkClick(e, 'hero')}
             className="flex items-center space-x-2 group"
           >
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-accentTeal to-accentIndigo flex items-center justify-center text-white shadow-lg shadow-accentTeal/20 group-hover:scale-105 transition-transform duration-300">
-              <Code className="w-6 h-6 stroke-[2.5]" />
-            </div>
+            <BrandLogo className="w-10 h-10 group-hover:scale-105 transition-transform duration-300" />
             <div className="flex flex-col">
-              <span className="font-display font-bold text-slate-800 dark:text-white tracking-wider leading-none text-base">
-                NTH
+              <span className="font-display font-bold text-slate-800 dark:text-white tracking-wider leading-none text-sm sm:text-base">
+                Nguyen Thanh Hung
               </span>
-              <span className="text-[10px] text-slate-500 dark:text-gray-400 font-medium tracking-widest uppercase">
-                Portfolio
+              <span className="text-[9px] sm:text-[10px] text-accentTeal font-medium tracking-widest uppercase mt-0.5">
+                Backend Developer
               </span>
             </div>
           </a>
@@ -130,9 +129,9 @@ const Navbar = ({ lang, theme, toggleTheme, toggleLanguage, t }) => {
 
               {/* CV Download CTA */}
               <a
-                href="/NguyenThanhHung_SoftwareEngineer_CV.pdf"
+                href="/cv/NguyenThanhHung_BackendDeveloper_CV.pdf"
                 download
-                className="flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold tracking-wide border border-accentTeal/30 text-accentTeal bg-accentTeal/5 hover:bg-accentTeal hover:text-white transition-all duration-300 shadow-sm"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold tracking-wide border border-accentTeal/30 text-accentTeal bg-accentTeal/5 hover:bg-accentTeal hover:text-white transition-all duration-300 shadow-sm whitespace-nowrap"
               >
                 {t.nav.downloadCv} <ArrowUpRight className="w-3.5 h-3.5" />
               </a>
@@ -222,13 +221,15 @@ const Navbar = ({ lang, theme, toggleTheme, toggleLanguage, t }) => {
             </button>
           </div>
           
-          <a
-            href="/NguyenThanhHung_SoftwareEngineer_CV.pdf"
-            download
-            className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-gradient-to-r from-accentTeal to-accentIndigo text-white font-semibold text-sm shadow-lg shadow-accentTeal/10 hover:shadow-accentTeal/20 transition-all"
-          >
-            {t.nav.downloadCv}
-          </a>
+          <div className="flex flex-col gap-2">
+            <a
+              href="/cv/NguyenThanhHung_BackendDeveloper_CV.pdf"
+              download
+              className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-gradient-to-r from-accentTeal to-accentIndigo text-white font-semibold text-xs shadow-lg shadow-accentTeal/10 hover:shadow-accentTeal/20 transition-all"
+            >
+              {t.nav.downloadCv} <ArrowUpRight className="w-3.5 h-3.5" />
+            </a>
+          </div>
         </div>
       </div>
     </>

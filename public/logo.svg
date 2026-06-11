@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
   <defs>
-    <linearGradient id="favicon-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+    <linearGradient id="logo-grad" x1="0%" y1="100%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#1e3a8a" />
       <stop offset="100%" stop-color="#06b6d4" />
     </linearGradient>
   </defs>
-  <rect width="100" height="100" rx="28" fill="url(#favicon-grad)" />
+  <rect width="100" height="100" rx="28" fill="url(#logo-grad)" />
   {/* T Top Bar */}
   <path d="M 18 30 L 42 30" stroke="#ffffff" stroke-width="8" stroke-linecap="round" />
   {/* T Stem */}

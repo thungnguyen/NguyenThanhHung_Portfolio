@@ -8,29 +8,31 @@ export const translations = {
       projects: 'Dự án',
       contact: 'Liên hệ',
       downloadCv: 'Tải CV',
+      downloadEn: 'CV Tiếng Anh',
+      downloadVi: 'CV Tiếng Việt',
       viewCv: 'Xem CV'
     },
     hero: {
       status: 'Sẵn sàng làm việc',
       greeting: 'Xin chào, tôi là',
-      subtitle: 'Software Engineer',
-      focus: 'Chuyên sâu Hệ thống phân tán & Microservices',
-      description: 'Là sinh viên năm cuối tại Đại học Sài Gòn, tôi định hướng phát triển sự nghiệp ở vị trí Lập trình viên Backend. Trải nghiệm làm việc tại Dcorp RKeeper Vietnam đã giúp tôi hiểu cách một hệ thống vận hành và cách giải quyết các bài toán thực tế của doanh nghiệp. Với tư duy luôn cởi mở đón nhận cái mới, khả năng thích nghi nhanh và tinh thần trách nhiệm cao, tôi luôn sẵn sàng đón nhận những thử thách công nghệ để không ngừng phát triển bản thân.',
+      subtitle: 'Backend Developer',
+      description: 'Tôi phát triển các tính năng backend giúp chuyển yêu cầu nghiệp vụ thành những luồng sản phẩm ổn định và dễ sử dụng. Tôi tập trung vào việc xây dựng API rõ ràng, xử lý dữ liệu cẩn thận và giải quyết các bài toán thực tế như giỏ hàng chung, cập nhật realtime và tích hợp hệ thống.',
       ctaProjects: 'Xem Dự án',
-      ctaContact: 'Liên hệ',
-      ctaDownloadCv: 'Tải CV',
+      ctaContact: 'Liên hệ tôi',
+      ctaDownloadEn: 'Tải CV Tiếng Anh',
+      ctaDownloadVi: 'Tải CV Tiếng Việt',
       ctaViewCv: 'Xem CV trực tiếp',
-      connect: 'Kết nối với tôi:'
+      connect: 'Kết nối với tôi:',
+      techHighlight: 'C# · ASP.NET Core Web API · MySQL · Redis · Kafka · SignalR · FastAPI · Node.js'
     },
     about: {
       title: 'Về Bản Thân',
-      subtitle: 'Tìm hiểu thêm về định hướng học tập, thành tích và mục tiêu phát triển của tôi.',
+      subtitle: 'Định hướng học tập, mục tiêu phát triển và năng lực lập trình backend.',
       generalInfo: 'Thông tin chung',
-      bio: 'Tôi là sinh viên năm cuối chuyên ngành Kỹ thuật Phần mềm / Công nghệ Thông tin tại Đại học Sài Gòn, đã tích lũy kinh nghiệm thực tế trong việc phát triển hệ thống tại Dcorp RKeeper Vietnam. Đam mê lớn nhất của tôi là lập trình Backend, thiết kế hệ thống phân tán (Microservices) có khả năng mở rộng cao, và nghiên cứu ứng dụng các công nghệ AI (Generative AI, Agentic Workflows) để tối ưu hóa quy trình thực tế. Với tinh thần tự học mạnh mẽ và tư duy cầu tiến, tôi luôn không ngừng trau dồi các công nghệ mới và sẵn sàng đón nhận những thử thách kỹ thuật phức tạp.',
-      birthdate: 'Ngày sinh: 08/02/2004',
+      bio: 'Tôi là Backend Developer có kinh nghiệm thực tế trong quá trình phát triển module Shared Cart cho hệ thống gọi món qua QR tại Dcorp RKeeper Vietnam. Trong dự án này, tôi tham gia từ việc hiểu yêu cầu nghiệp vụ, xây dựng API backend, xử lý quyền thao tác của người dùng, đến các tình huống đồng thời và đồng bộ dữ liệu realtime.\n\nTôi quan tâm đến việc viết backend rõ ràng, dễ bảo trì và bám sát bài toán thực tế. Bên cạnh công nghệ, tôi luôn cố gắng hiểu lý do phía sau từng luồng nghiệp vụ để có thể xây dựng tính năng đúng nhu cầu sản phẩm và dễ phát triển về sau.',
       addressVal: 'Địa chỉ: Bình Chánh, TP. Hồ Chí Minh, Việt Nam',
       objectiveTitle: 'Mục tiêu nghề nghiệp',
-      objective: 'Tìm kiếm cơ hội làm việc chính thức (Full-time) ở vị trí Backend Developer / Software Engineer để cống hiến năng lực vào các dự án thực tế của doanh nghiệp. Đồng thời, tôi mong muốn áp dụng nền tảng kiến trúc phần mềm, tư duy thiết kế hệ thống (System Design) và liên tục nâng cao kỹ năng lập trình hệ thống, tối ưu hóa hiệu năng để hướng tới mục tiêu trở thành một Kỹ sư Phần mềm toàn diện.',
+      objective: 'Tôi đang tìm kiếm cơ hội ở vị trí Backend Developer, nơi tôi có thể tham gia phát triển các sản phẩm thực tế, học hỏi từ các anh/chị kỹ sư có kinh nghiệm và đóng góp lâu dài cho đội ngũ kỹ thuật. Tôi mong muốn tiếp tục phát triển năng lực về API design, database, business logic, concurrency và realtime thông qua những dự án có tính ứng dụng thực tế.',
       educationTitle: 'Học vấn',
       school: 'Đại học Sài Gòn',
       major: 'Kỹ sư Công nghệ Thông tin',
@@ -43,98 +45,134 @@ export const translations = {
       cvViewerTitle: 'Xem CV trực tuyến',
       cvViewerSubtitle: 'Bạn có thể xem trực tiếp bản CV Tiếng Anh hoặc Tiếng Việt của tôi dưới đây.',
       cvLangEn: 'Bản Tiếng Anh (EN)',
-      cvLangVi: 'Bản Tiếng Việt (VI)'
+      cvLangVi: 'Bản Tiếng Việt (VI)',
+      strengthsTitle: 'Năng lực Backend chính',
+      cards: {
+        apiTitle: 'Phát triển API Backend',
+        apiDesc: 'Xây dựng RESTful API rõ ràng, dễ bảo trì và bám sát luồng nghiệp vụ thực tế. Tập trung vào việc xử lý dữ liệu đúng, validate hợp lý và giúp các tính năng vận hành ổn định trong sản phẩm.',
+        dbTitle: 'Database & Logic nghiệp vụ',
+        dbDesc: 'Thiết kế schema và xử lý logic dữ liệu cho các luồng nghiệp vụ như giỏ hàng chung, hóa đơn, đơn hàng và trạng thái giao hàng. Quan tâm đến tính toàn vẹn dữ liệu, khả năng truy vấn và mở rộng về sau.',
+        realtimeTitle: 'Realtime & Xử lý đồng thời',
+        realtimeDesc: 'Xử lý các tình huống nhiều người dùng cùng thao tác trên một luồng dữ liệu, như cập nhật giỏ hàng hoặc theo dõi trạng thái giao hàng. Có kinh nghiệm với Redis, SignalR/Socket.IO và message-based communication để hỗ trợ cập nhật realtime.'
+      },
+      cv: {
+        title: 'CV / Resume',
+        description: 'Bạn có thể xem hoặc tải CV của tôi bằng tiếng Anh và tiếng Việt. Nội dung CV tập trung vào kinh nghiệm Backend, dự án thực tế tại Dcorp RKeeper Vietnam và các project cá nhân liên quan đến AI/OCR, realtime và mô phỏng giao hàng bằng drone.',
+        viewBtn: 'Xem CV',
+        downloadBtn: 'Tải CV'
+      }
     },
     skills: {
       title: 'Kỹ Năng Chuyên Môn',
-      subtitle: 'Các công nghệ, ngôn ngữ lập trình và công cụ tôi thường xuyên sử dụng trong các dự án.',
+      subtitle: 'Các công nghệ, ngôn ngữ lập trình và công cụ phục vụ phát triển hệ thống backend.',
       categories: {
-        programming: 'Ngôn ngữ lập trình',
-        backend: 'Phát triển Backend',
-        db: 'Cơ sở dữ liệu & ORM',
-        architecture: 'System Architecture & Realtime',
-        frontend: 'Phát triển Frontend',
-        aiTools: 'AI & Công cụ lập trình'
+        backend: 'Core Backend',
+        db: 'Database & ORM',
+        architecture: 'Realtime & Messaging',
+        frontend: 'Additional Technologies',
+        tools: 'Tools'
       }
     },
     experience: {
-      title: 'Kinh Nghiệm Làm Việc',
-      subtitle: 'Quá trình tích lũy kinh nghiệm làm việc thực tế tại doanh nghiệp.',
-      internshipType: 'Thực tập sinh Lập trình',
-      projectJoined: 'Dự án tham gia:',
-      techUsed: 'Công nghệ sử dụng',
-      list: [
+      title: 'Featured Experience',
+      subtitle: 'Một dự án thực tập thực tế thể hiện kinh nghiệm backend của tôi trong việc giải quyết các bài toán sản phẩm và hệ thống thực tế.',
+      projectLabel: 'Dự án:',
+      roleLabel: 'Vai trò:',
+      timeLabel: 'Thời gian:',
+      moduleLabel: 'Module:',
+      company: 'Dcorp RKeeper Vietnam',
+      project: 'SkyOrder – Hệ thống gọi món nhà hàng qua mã QR',
+      role: 'Thực tập sinh Developer (Định hướng Backend)',
+      time: 'Tháng 3, 2026 - Tháng 6, 2026',
+      module: 'Shared Cart cho luồng Group Ordering',
+      description: 'Module giỏ hàng chung cho hệ thống gọi món qua QR, cho phép nhiều người dùng tại cùng một bàn tham gia chung một giỏ hàng, quản lý món theo từng participant, nhận cập nhật realtime và gửi đơn đã xác nhận sang luồng POS/Bếp.',
+      techBadgesLabel: 'Công nghệ sử dụng:',
+      flowTitle: 'LUỒNG XỬ LÝ SHARED CART',
+      flowSteps: [
+        'Quét QR',
+        'Vào phiên',
+        'Gán vai trò',
+        'Thêm món',
+        'Member Ready',
+        'Host Confirm',
+        'Gửi đơn',
+        'Đồng bộ realtime'
+      ],
+      cards: [
         {
-          company: 'Dcorp RKeeper Vietnam',
-          role: 'Developer Intern',
-          duration: 'Tháng 3, 2026 - Tháng 6, 2026',
-          location: 'TP. Hồ Chí Minh, Việt Nam',
-          project: 'QR-based Restaurant Ordering System (SkyOrder)',
-          tech: ['Next.js 13+', 'Zustand', 'SignalR', 'C#', '.NET Core Web API', 'Autofac DI', 'linq2db ORM', 'MySQL', 'Swagger'],
-          details: [
-            'Phát triển tính năng Gọi món nhóm (Group Ordering) cho hệ thống gọi món qua QR, cho phép nhiều khách hàng tại cùng một bàn có thể quản lý chung một giỏ hàng.',
-            'Tích hợp đồng bộ hóa dữ liệu thời gian thực bằng SignalR, RESTful API và Zustand để đồng bộ dữ liệu giỏ hàng giữa nhiều thiết bị khách hàng trong quá trình gọi món.',
-            'Hỗ trợ tích hợp POS để đẩy đơn đặt hàng trực tuyến từ hệ thống QR Ordering sang hệ thống bán hàng.',
-            'Hỗ trợ các tác vụ Kho dữ liệu (Data Warehouse), bao gồm xử lý, đối soát và chuẩn hóa dữ liệu phục vụ báo cáo nội bộ.',
-            'Xây dựng và ứng dụng bộ AI Kit nội bộ hỗ trợ việc đọc hiểu source-code, hệ thống hóa quy trình nghiệp vụ (business-rule), review logic và tự động hóa kiểm thử tính năng.'
-          ]
+          title: 'Phân quyền theo participant',
+          content: 'Triển khai cơ chế kiểm tra quyền dựa trên participant-key, giúp member chỉ chỉnh sửa món của chính mình, đồng thời vẫn hỗ trợ quyền xử lý ở cấp Host khi cần.'
+        },
+        {
+          title: 'Kiểm soát đồng thời bằng Redis',
+          content: 'Tích hợp distributed lock bằng Redis với key động theo bàn hoặc phiên order, giúp hạn chế gán trùng Host và giảm xung đột khi nhiều người cập nhật giỏ hàng cùng lúc.'
+        },
+        {
+          title: 'Đồng bộ giỏ hàng realtime',
+          content: 'Publish các sự kiện cập nhật giỏ hàng thông qua MassTransit Kafka và hỗ trợ broadcast bằng SignalR để các participant cùng bàn nhận thay đổi realtime.'
+        },
+        {
+          title: 'Điều chỉnh luồng POS/Bếp',
+          content: 'Điều chỉnh luồng gửi đơn sang POS/Bếp bằng cách mapping dữ liệu Shared Cart vào các schema lưu trữ đơn hàng trước khi submit đơn cuối cùng.'
         }
       ]
     },
     projects: {
       title: 'Dự Án Tiêu Biểu',
-      subtitle: 'Những sản phẩm phần mềm tôi tự phát triển và tích hợp các công nghệ hiện đại.',
-      featuresTitle: 'Tính năng chính:',
-      repoLink: 'Mã nguồn dự án',
+      subtitle: 'Các dự án thực tiễn thể hiện năng lực giải quyết vấn đề kỹ thuật backend.',
+      featuresTitle: 'Đóng góp chính trong dự án:',
+      repoLink: 'Mã nguồn GitHub',
       list: [
         {
-          title: 'Hệ thống Quản lý Tài chính Cá nhân tích hợp AI',
-          year: '2026',
+          title: 'AI-powered Personal Finance Management System',
+          team: 'Nhóm 4 thành viên | 2026',
+          description: 'Hệ thống quản lý tài chính cá nhân tập trung vào quản lý hóa đơn, tự động trích xuất thông tin hóa đơn từ ảnh chụp tải lên và phân tích chi tiêu bằng AI.',
+          tech: ['ReactJS', 'FastAPI', 'PostgreSQL', 'Redis/RQ', 'Socket.io', 'Docker', 'Gemini API', 'OCR'],
           github: 'https://github.com/Tahumn/finance-ai-system/tree/tnhu',
-          description: 'Hệ thống microservices tích hợp OCR, Gemini và Dify API giúp tự động hóa nhận diện, phân tích và trích xuất thông tin hóa đơn chi tiêu từ ngôn ngữ tự nhiên của người dùng.',
-          tech: ['FastAPI', 'PostgreSQL', 'Redis/RQ', 'Socket.io', 'ReactJS', 'n8n', 'Gemini API', 'Dify API', 'OCR', 'OpenCV'],
+          highlights: ['Bill Management', 'OCR Extraction', 'AI Insights', 'FastAPI', 'PostgreSQL'],
           features: [
-            'Thiết kế kiến trúc hệ thống backend theo kiến trúc microservices với các service riêng biệt: Xác thực (Auth), Tài chính (Finance), AI Agent, Thông báo (Notification), Lập kế hoạch (Planning) và Giao dịch định kỳ (Recurring).',
-            'Xây dựng luồng xử lý AI/NLP để nhận diện ý định (intent recognition), trích xuất thực thể dữ liệu chi tiêu từ câu nói tự nhiên.',
-            'Tích hợp OCR nhận diện hóa đơn sử dụng OpenCV xử lý ảnh tiền kỳ, kết hợp Tesseract OCR, Gemini và Dify để chuyển đổi dữ liệu hóa đơn thành các giao dịch có cấu trúc.'
+            'Phát triển các tính năng backend quản lý hóa đơn và biên lai, hỗ trợ xử lý ảnh tải lên và lưu trữ dữ liệu chi tiêu có cấu trúc.',
+            'Xây dựng luồng trích xuất thông tin hóa đơn sử dụng FastAPI, xử lý ảnh và Gemini API để tự động nhận diện cửa hàng, ngày giao dịch, tổng tiền, thuế VAT và các mặt hàng chi tiết từ ảnh chụp.',
+            'Phát triển tính năng phân tích tài chính thông minh sử dụng AI để đánh giá thói quen chi tiêu, cảnh báo bất thường, dự báo và đề xuất tiết kiệm.'
           ]
         },
         {
-          title: 'FoodFast - Hệ thống Giao thức ăn bằng Drone',
-          year: '2025',
+          title: 'Drone-based Food Delivery Simulation System',
+          team: 'Nhóm 2 thành viên | 2025',
+          description: 'Hệ thống mô phỏng giao thức ăn bằng drone thể hiện khả năng xử lý đơn hàng, điều phối drone giao hàng, theo dõi thời gian thực và trực quan hóa lộ trình bay trên bản đồ tương tác.',
+          tech: ['ReactJS', 'Node.js', 'Express.js', 'MongoDB', 'Socket.IO', 'Redis', 'Docker', 'MapTiler API', 'ORS API'],
           github: 'https://github.com/thungnguyen/FoodDelivery',
-          description: 'Ứng dụng mô phỏng và quản lý giao hàng bằng drone tự động dựa trên kiến trúc hệ thống phân tán, xử lý bất đồng bộ dữ liệu đơn hàng và vẽ đường bay realtime.',
-          tech: ['Express.js', 'PostgreSQL', 'WebSocket', 'ReactJS', 'TailwindCSS', 'RabbitMQ', 'Docker Compose'],
+          highlights: ['Drone Simulation', 'Realtime Tracking', 'MongoDB', 'Socket.IO', 'Redis Pub/Sub'],
           features: [
-            'Thiết kế hệ thống theo kiến trúc microservices chia tách nghiệp vụ riêng biệt: Người dùng, Sản phẩm, Đơn hàng, Thanh toán, Giao hàng và Email.',
-            'Tích hợp RabbitMQ để giao tiếp bất đồng bộ giữa các service, đảm bảo tính sẵn sàng và tránh nghẽn luồng xử lý đơn hàng.',
-            'Phát triển hệ thống mô phỏng giao hàng bằng drone với khả năng theo dõi lộ trình thời gian thực hiển thị bằng WebSocket trên bản đồ React.'
+            'Đồng trưởng nhóm phát triển hệ thống mô phỏng giao hàng bằng drone với cấu trúc tách biệt các dịch vụ: Auth, Restaurant, Order, Payment, Delivery và Realtime Gateway.',
+            'Thiết kế cơ sở dữ liệu MongoDB và API backend quản lý các trung tâm điều phối (Hub), drone, đơn hàng giao nhận, nhật ký hành trình và trạng thái thanh toán.',
+            'Xử lý tính năng theo dõi vị trí drone và trực quan hóa lộ trình thời gian thực sử dụng Socket.IO, Redis pub/sub và các dịch vụ bản đồ đường bay (ORS, MapTiler) để mô phỏng drone chuyển động trên bản đồ.'
           ]
         }
       ]
     },
     contact: {
       title: 'Liên Hệ Với Tôi',
-      subtitle: 'Bạn có dự án cần phát triển hoặc muốn trao đổi công việc? Hãy kết nối ngay.',
-      infoTitle: 'Thông tin kết nối',
-      infoDesc: 'Bạn có thể gửi email, liên hệ qua số điện thoại hoặc điền vào biểu mẫu bên cạnh. Tôi sẽ phản hồi trong thời gian sớm nhất!',
+      subtitle: 'Let’s build practical backend systems together.',
+      infoTitle: 'Thông tin liên hệ',
+      infoDesc: 'Cảm ơn bạn đã xem qua portfolio. Vui lòng kết nối qua các kênh dưới đây, tôi sẽ phản hồi nhanh nhất có thể!',
       emailLabel: 'EMAIL',
       phoneLabel: 'ĐIỆN THOẠI',
       addressLabel: 'ĐỊA CHỈ',
       addressVal: 'Bình Chánh, TP. Hồ Chí Minh, Việt Nam',
-      formTitle: 'Gửi tin nhắn liên hệ',
-      formName: 'Họ và Tên',
+      formTitle: 'Gửi tin nhắn',
+      formName: 'Họ và tên',
       formNamePlaceholder: 'Nguyễn Văn A',
       formEmail: 'Địa chỉ Email',
-      formEmailPlaceholder: 'email@vidu.com',
-      formMessage: 'Lời nhắn của bạn',
-      formMessagePlaceholder: 'Nhập nội dung tin nhắn...',
+      formEmailPlaceholder: 'email@example.com',
+      formMessage: 'Lời nhắn',
+      formMessagePlaceholder: 'Lời nhắn của bạn...',
       formSubmit: 'Gửi tin nhắn',
-      successTitle: 'Gửi Tin Nhắn Thành Công!',
-      successDesc: 'Cảm ơn bạn đã liên hệ. Tôi đã nhận được tin nhắn và sẽ phản hồi lại trong thời gian sớm nhất.'
+      successTitle: 'Gửi tin nhắn thành công!',
+      successDesc: 'Tôi đã nhận được tin nhắn và sẽ liên hệ lại với bạn sớm.'
     },
     footer: {
-      madeWith: 'Được xây dựng với',
+      madeWith: 'Được thiết kế với',
       using: 'bởi Nguyễn Thành Hưng'
     }
   },
@@ -147,29 +185,31 @@ export const translations = {
       projects: 'Projects',
       contact: 'Contact',
       downloadCv: 'Download CV',
+      downloadEn: 'English CV',
+      downloadVi: 'Vietnamese CV',
       viewCv: 'View CV'
     },
     hero: {
       status: 'Available for work',
       greeting: "Hello, I'm",
-      subtitle: 'Software Engineer',
-      focus: 'Distributed Systems & Microservices Specialist',
-      description: 'As a final-year student at Saigon University, I am pursuing a career as a Backend Developer. My professional experience at Dcorp RKeeper Vietnam has taught me how systems operate and how to solve real-world business challenges. With an open mindset, quick adaptability, and a high sense of responsibility, I am always ready to embrace technological challenges to continuously grow and improve myself.',
+      subtitle: 'Backend Developer',
+      description: 'I build backend features that turn business requirements into reliable product workflows. My focus is on writing clear APIs, handling data carefully, and solving practical problems such as shared cart logic, realtime updates, and system integration.',
       ctaProjects: 'View Projects',
       ctaContact: 'Contact Me',
-      ctaDownloadCv: 'Download CV',
+      ctaDownloadEn: 'Download English CV',
+      ctaDownloadVi: 'Download Vietnamese CV',
       ctaViewCv: 'View CV',
-      connect: 'Connect with me:'
+      connect: 'Connect with me:',
+      techHighlight: 'C# · ASP.NET Core Web API · MySQL · Redis · Kafka · SignalR · FastAPI · Node.js'
     },
     about: {
       title: 'About Me',
-      subtitle: 'Find out more about my educational background, achievements, and career objectives.',
-      generalInfo: 'General Information',
-      bio: 'I am a final-year Information Technology student at Saigon University with hands-on experience building real-world systems at Dcorp RKeeper Vietnam. My primary focus is Backend Development, designing highly scalable microservices architectures, and integrating advanced AI solutions (Generative AI, AI Agents, workflows) into products. Guided by a growth mindset and a passion for continuous learning, I am always eager to tackle new technical challenges and refine my software engineering skills.',
-      birthdate: 'Date of Birth: 08/02/2004',
-      addressVal: 'Address: Binh Chanh, Ho Chi Minh City, Vietnam',
+      subtitle: 'My educational background, career objectives, and core backend capabilities.',
+      generalInfo: 'General Info',
+      bio: 'I am a Backend Developer with hands-on experience working on the Shared Cart module for a QR-based restaurant ordering system at Dcorp RKeeper Vietnam. In this project, I participated in understanding business requirements, building backend APIs, handling user permissions, and solving concurrency and realtime synchronization scenarios.\n\nI care about writing backend code that is clear, maintainable, and aligned with real product needs. Beyond using technologies, I try to understand the reason behind each business flow so that the features I build can solve the right problems and remain easier to extend later.',
+      addressVal: 'Address: Binh Chanh District, Ho Chi Minh City, Vietnam',
       objectiveTitle: 'Career Objective',
-      objective: 'Seeking a full-time Backend Developer / Software Engineer position to contribute to real-world software products, apply software architecture principles and System Design thinking, and continuously enhance system engineering capabilities to optimize performance, with the ultimate goal of becoming a well-rounded Software Engineer.',
+      objective: 'I am looking for a Backend Developer opportunity where I can contribute to practical software products, learn from experienced engineers, and grow steadily within a professional engineering team. I want to continue improving my skills in API design, database design, business logic, concurrency handling, and realtime communication through real-world projects.',
       educationTitle: 'Education',
       school: 'Saigon University',
       major: 'Bachelor of Engineering in Information Technology',
@@ -182,95 +222,131 @@ export const translations = {
       cvViewerTitle: 'Direct CV Viewer',
       cvViewerSubtitle: 'You can directly read either my English (EN) or Vietnamese (VI) CV below.',
       cvLangEn: 'English Version (EN)',
-      cvLangVi: 'Vietnamese Version (VI)'
+      cvLangVi: 'Vietnamese Version (VI)',
+      strengthsTitle: 'Core Backend Strengths',
+      cards: {
+        apiTitle: 'Backend API Development',
+        apiDesc: 'Build clear and maintainable RESTful APIs that align with real business workflows. Focus on correct data handling, proper validation, and stable feature behavior in practical products.',
+        dbTitle: 'Database & Business Logic',
+        dbDesc: 'Design data schemas and implement business logic for workflows such as shared carts, receipts, orders, and delivery status. Focus on data integrity, query clarity, and future maintainability.',
+        realtimeTitle: 'Realtime & Concurrency',
+        realtimeDesc: 'Handle scenarios where multiple users interact with the same data flow, such as shared cart updates or delivery tracking. Experienced with Redis, SignalR/Socket.IO, and message-based communication for realtime updates.'
+      },
+      cv: {
+        title: 'Resume / CV',
+        description: 'You can view or download my resume in English and Vietnamese. The resume highlights my backend experience, real-world work at Dcorp RKeeper Vietnam, and personal projects involving AI/OCR, realtime communication, and drone delivery simulation.',
+        viewBtn: 'View CV',
+        downloadBtn: 'Download CV'
+      }
     },
     skills: {
       title: 'Technical Skills',
-      subtitle: 'Technologies, programming languages, and engineering tools I regularly utilize in projects.',
+      subtitle: 'Technologies, programming languages, and engineering tools I utilize for backend systems.',
       categories: {
-        programming: 'Programming Languages',
-        backend: 'Backend Development',
-        db: 'Databases & ORM',
-        architecture: 'System Architecture & Realtime',
-        frontend: 'Frontend Development',
-        aiTools: 'AI & Engineering Tools'
+        backend: 'Core Backend',
+        db: 'Database & ORM',
+        architecture: 'Realtime & Messaging',
+        frontend: 'Additional Technologies',
+        tools: 'Tools'
       }
     },
     experience: {
-      title: 'Work Experience',
-      subtitle: 'My professional experience journey in corporate environments.',
-      internshipType: 'Developer Intern',
-      projectJoined: 'Project:',
-      techUsed: 'Technologies Used',
-      list: [
+      title: 'Featured Experience',
+      subtitle: 'A real-world internship project that showcases my hands-on backend experience in solving practical product and system problems.',
+      projectLabel: 'Project:',
+      roleLabel: 'Role:',
+      timeLabel: 'Duration:',
+      moduleLabel: 'Module:',
+      company: 'Dcorp RKeeper Vietnam',
+      project: 'SkyOrder – QR-based Restaurant Ordering System',
+      role: 'Developer Intern (Backend Focus)',
+      time: 'Mar 2026 – Jun 2026',
+      module: 'Shared Cart for Group Ordering',
+      description: 'A shared cart module for a QR-based restaurant ordering system, allowing multiple users at the same table to join one cart, manage item ownership by participant, receive realtime cart updates, and submit confirmed orders to the POS/Kitchen flow.',
+      techBadgesLabel: 'Technologies Used:',
+      flowTitle: 'SHARED CART WORKFLOW',
+      flowSteps: [
+        'QR Scan',
+        'Join Session',
+        'Assign Role',
+        'Add Items',
+        'Member Ready',
+        'Host Confirm',
+        'Submit Order',
+        'Realtime Sync'
+      ],
+      cards: [
         {
-          company: 'Dcorp RKeeper Vietnam',
-          role: 'Developer Intern',
-          duration: 'Mar 2026 - Jun 2026',
-          location: 'Ho Chi Minh City, Vietnam',
-          project: 'QR-based Restaurant Ordering System (SkyOrder)',
-          tech: ['Next.js 13+', 'Zustand', 'SignalR', 'C#', '.NET Core Web API', 'Autofac DI', 'linq2db ORM', 'MySQL', 'Swagger'],
-          details: [
-            'Developed Group Ordering features for a QR-based restaurant ordering system, allowing multiple customers at the same table to manage a shared cart.',
-            'Integrated realtime synchronization using SignalR, RESTful APIs, and Zustand to synchronize cart data across multiple clients during ordering.',
-            'Supported POS integration for submitting online orders from the QR Ordering System to the sales system.',
-            'Assisted with Data Warehouse tasks, including data processing, validation, and standardization for internal reporting.',
-            'Built and applied an internal AI Kit to support source-code understanding, business-rule organization, logic review, and feature testing.'
-          ]
+          title: 'Participant-based Permissions',
+          content: 'Implemented participant-key based ownership validation so members could update only their own cart items, while still supporting host-level override actions.'
+        },
+        {
+          title: 'Redis Concurrency Control',
+          content: 'Integrated Redis-based distributed locking with dynamic keys based on table or order identifiers to prevent duplicate Host assignment and reduce concurrent cart update conflicts.'
+        },
+        {
+          title: 'Realtime Cart Synchronization',
+          content: 'Published cart update events through MassTransit Kafka and supported SignalR-based broadcasting so participants at the same table could receive cart updates in realtime.'
+        },
+        {
+          title: 'POS/Kitchen Flow Adaptation',
+          content: 'Adapted the existing POS/Kitchen submission flow by mapping shared cart data into persistent order schemas before final order submission.'
         }
       ]
     },
     projects: {
       title: 'Personal Projects',
-      subtitle: 'Software products I designed, developed, and integrated with modern technologies.',
-      featuresTitle: 'Key Features:',
-      repoLink: 'Source Code',
+      subtitle: 'Practical backend systems illustrating system architecture, file extraction, and simulation.',
+      featuresTitle: 'Key Contributions:',
+      repoLink: 'GitHub Repository',
       list: [
         {
           title: 'AI-powered Personal Finance Management System',
-          year: '2026',
+          team: 'Team of 4 | 2026',
+          description: 'A personal finance system focused on bill/receipt management, automatic invoice extraction from uploaded images, and AI-assisted spending insights.',
+          tech: ['ReactJS', 'FastAPI', 'PostgreSQL', 'Redis/RQ', 'Socket.io', 'Docker', 'Gemini API', 'OCR'],
           github: 'https://github.com/Tahumn/finance-ai-system/tree/tnhu',
-          description: 'A microservices backend system integrated with OCR, Gemini and Dify API to automate receipt extraction and expense transaction logging from natural language.',
-          tech: ['FastAPI', 'PostgreSQL', 'Redis/RQ', 'Socket.io', 'ReactJS', 'n8n', 'Gemini API', 'Dify API', 'OCR', 'OpenCV'],
+          highlights: ['Bill Management', 'OCR Extraction', 'AI Insights', 'FastAPI', 'PostgreSQL'],
           features: [
-            'Designed a microservices backend with separated Auth, Finance, AI Agent, Notification, Planning, and Recurring services.',
-            'Built AI/NLP workflows for intent recognition, information extraction, and automatic transaction recording from natural language.',
-            'Integrated receipt OCR using OpenCV, Tesseract OCR, Gemini, and Dify to convert receipt data into structured transactions.'
+            'Developed backend features for bill and receipt management, supporting uploaded receipt images and structured expense data.',
+            'Implemented an OCR-based invoice extraction flow using FastAPI, image processing, and Gemini API to extract merchant, transaction date, total amount, VAT, and line items from uploaded receipt images.',
+            'Built AI-assisted financial insight features to analyze user spending data and provide suggestions such as spending anomalies, forecasts, and saving tips.'
           ]
         },
         {
-          title: 'FoodFast Drone Delivery',
-          year: '2025',
+          title: 'Drone-based Food Delivery Simulation System',
+          team: 'Team of 2 | 2025',
+          description: 'A drone-based food delivery simulation system that demonstrates order processing, drone delivery assignment, realtime tracking, and route visualization on an interactive map.',
+          tech: ['ReactJS', 'Node.js', 'Express.js', 'MongoDB', 'Socket.IO', 'Redis', 'Docker', 'MapTiler API', 'ORS API'],
           github: 'https://github.com/thungnguyen/FoodDelivery',
-          description: 'A microservices-based drone delivery simulation application handling asynchronous ordering workflows and real-time flight route tracking on a map.',
-          tech: ['Express.js', 'PostgreSQL', 'WebSocket', 'ReactJS', 'TailwindCSS', 'RabbitMQ', 'Docker Compose'],
+          highlights: ['Drone Simulation', 'Realtime Tracking', 'MongoDB', 'Socket.IO', 'Redis Pub/Sub'],
           features: [
-            'Designed a microservices-based system with separated User, Product, Order, Payment, Delivery, and Email services.',
-            'Integrated RabbitMQ for asynchronous service communication and WebSocket for realtime order status updates.',
-            'Developed a drone delivery simulation system with real-time route tracking displayed on an interactive map.'
+            'Led a team of 2 in the development of a drone-based food delivery simulation system with separated Auth, Restaurant, Order, Payment, Delivery, and Realtime Gateway services.',
+            'Designed backend APIs and MongoDB schemas for drone hubs, drones, deliveries, tracking logs, order management, payment flow, and delivery status updates.',
+            'Implemented realtime drone tracking and route visualization using Socket.IO, Redis pub/sub, and map/route APIs to simulate delivery movement on an interactive map.'
           ]
         }
       ]
     },
     contact: {
       title: 'Get In Touch',
-      subtitle: 'Do you have a project to discuss or want to connect? Reach out below.',
+      subtitle: 'Let’s build practical backend systems together.',
       infoTitle: 'Contact Information',
-      infoDesc: 'Feel free to send an email, call, or fill out the form. I will get back to you as soon as possible!',
+      infoDesc: 'Feel free to connect with me using the coordinates below or fill out the form. I will do my best to get back to you promptly!',
       emailLabel: 'EMAIL',
       phoneLabel: 'PHONE',
       addressLabel: 'ADDRESS',
-      addressVal: 'Binh Chanh, Ho Chi Minh City, Vietnam',
-      formTitle: 'Send a Message',
+      addressVal: 'Binh Chanh District, Ho Chi Minh City, Vietnam',
+      formTitle: 'Send Message',
       formName: 'Full Name',
       formNamePlaceholder: 'John Doe',
       formEmail: 'Email Address',
-      formEmailPlaceholder: 'email@example.com',
-      formMessage: 'Your Message',
-      formMessagePlaceholder: 'Enter your message...',
+      formEmailPlaceholder: 'john.doe@example.com',
+      formMessage: 'Message',
+      formMessagePlaceholder: 'Your message here...',
       formSubmit: 'Send Message',
       successTitle: 'Message Sent Successfully!',
-      successDesc: 'Thank you for reaching out. I have received your message and will contact you shortly.'
+      successDesc: 'Thank you for reaching out. I have received your message and will follow up shortly.'
     },
     footer: {
       madeWith: 'Built with',

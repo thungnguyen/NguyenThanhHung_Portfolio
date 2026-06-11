@@ -1,5 +1,7 @@
 import React from 'react';
 import { Github, Linkedin, Heart } from 'lucide-react';
+import BrandLogo from './BrandLogo';
+
 
 const Footer = ({ lang, t }) => {
   const handleScrollToTop = (e) => {
@@ -21,15 +23,13 @@ const Footer = ({ lang, t }) => {
             onClick={handleScrollToTop}
             className="flex items-center space-x-2 group"
           >
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-accentTeal to-accentIndigo flex items-center justify-center font-display font-bold text-white text-sm shadow group-hover:scale-105 transition-transform duration-300">
-              H
-            </div>
-            <span className="font-display font-bold text-slate-850 dark:text-white tracking-wider text-sm">
+            <BrandLogo className="w-8 h-8 group-hover:scale-105 transition-transform duration-300" />
+            <span className="font-display font-bold text-slate-800 dark:text-white tracking-wider text-sm">
               NGUYEN THANH HUNG
             </span>
           </a>
           <p className="text-slate-500 dark:text-gray-500 text-xs text-center md:text-left mt-1">
-            © {new Date().getFullYear()} NTH. All rights reserved.
+            © {new Date().getFullYear()} TH. All rights reserved.
           </p>
         </div>
 
@@ -46,7 +46,7 @@ const Footer = ({ lang, t }) => {
             href="https://github.com/thungnguyen"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 rounded-lg text-slate-500 hover:text-slate-850 dark:text-gray-550 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-white/5 transition-all"
+            className="p-2 rounded-lg text-slate-500 hover:text-slate-800 dark:text-gray-500 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-white/5 transition-all"
             aria-label="GitHub Profile"
           >
             <Github className="w-5 h-5" />
@@ -55,7 +55,7 @@ const Footer = ({ lang, t }) => {
             href="https://linkedin.com/in/ngthhung"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 rounded-lg text-slate-500 hover:text-slate-850 dark:text-gray-550 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-white/5 transition-all"
+            className="p-2 rounded-lg text-slate-500 hover:text-slate-800 dark:text-gray-500 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-white/5 transition-all"
             aria-label="LinkedIn Profile"
           >
             <Linkedin className="w-5 h-5" />
@@ -64,7 +64,7 @@ const Footer = ({ lang, t }) => {
             href="https://zalo.me/0376640875"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 rounded-lg text-slate-500 hover:text-slate-850 dark:text-gray-550 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-white/5 transition-all flex items-center justify-center"
+            className="p-2 rounded-lg text-slate-500 hover:text-slate-800 dark:text-gray-500 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-white/5 transition-all flex items-center justify-center"
             aria-label="Zalo Connect"
           >
             <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

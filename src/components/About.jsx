@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap, Award, Calendar, MapPin, Mail, Phone, User, Eye, FileText, Globe } from 'lucide-react';
+import { GraduationCap, Award, Calendar, MapPin, Mail, Phone, User, Eye, FileText, Globe, Server, Database } from 'lucide-react';
 
 const About = ({ lang, t }) => {
   const [cvViewerLang, setCvViewerLang] = useState('en'); // Default to English first as requested
@@ -43,7 +43,7 @@ const About = ({ lang, t }) => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-100px' }}
-          className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16"
+          className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-12"
         >
           {/* Bio & Intro Card */}
           <motion.div variants={itemVariants} className="lg:col-span-7 space-y-6">
@@ -58,10 +58,6 @@ const About = ({ lang, t }) => {
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 text-sm">
-                <div className="flex items-center gap-3 text-slate-600 dark:text-gray-400">
-                  <Calendar className="w-4 h-4 text-accentTeal shrink-0" />
-                  <span>{t.about.birthdate}</span>
-                </div>
                 <div className="flex items-center gap-3 text-slate-600 dark:text-gray-400">
                   <MapPin className="w-4 h-4 text-accentTeal shrink-0" />
                   <span>{t.about.addressVal}</span>
@@ -80,7 +76,7 @@ const About = ({ lang, t }) => {
                 </div>
               </div>
 
-              {/* Target block */}
+              {/* Objective Block */}
               <div className="p-4 rounded-xl bg-accentTeal/5 border border-accentTeal/10 text-slate-700 dark:text-gray-300">
                 <span className="font-bold text-accentTeal block mb-1 text-sm">{t.about.objectiveTitle}</span>
                 <p className="text-xs sm:text-sm leading-relaxed">
@@ -127,13 +123,126 @@ const About = ({ lang, t }) => {
                     <Award className="w-4 h-4 text-accentTeal" />
                   </div>
                   <div>
-                    <span className="font-bold text-slate-850 dark:text-white block">{t.about.scholarship}</span>
+                    <span className="font-bold text-slate-800 dark:text-white block">{t.about.scholarship}</span>
                     <span className="text-xs text-slate-500 dark:text-gray-400">{t.about.scholarshipDesc}</span>
                   </div>
                 </li>
               </ul>
             </div>
           </motion.div>
+        </motion.div>
+
+        {/* Highlight Section Title */}
+        <div className="text-center max-w-xl mx-auto mb-12">
+          <h3 className="font-display font-bold text-2xl text-slate-800 dark:text-white mb-2">
+            {t.about.strengthsTitle}
+          </h3>
+          <div className="h-0.5 w-16 bg-gradient-to-r from-accentTeal to-accentIndigo mx-auto rounded-full" />
+        </div>
+
+        {/* Highlight Cards Grid */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-100px' }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16"
+        >
+          <motion.div variants={itemVariants} className="glass p-6 rounded-2xl border border-slate-200 dark:border-white/5 flex flex-col gap-3 card-hover shadow-sm bg-gradient-to-b from-white dark:from-darkCard to-transparent">
+            <div className="w-10 h-10 rounded-xl bg-accentTeal/10 text-accentTeal flex items-center justify-center font-bold">
+              <Server className="w-5 h-5" />
+            </div>
+            <h4 className="font-display font-bold text-base text-slate-800 dark:text-white mt-1">
+              {t.about.cards.apiTitle}
+            </h4>
+            <p className="text-xs sm:text-sm text-slate-500 dark:text-gray-400 leading-relaxed">
+              {t.about.cards.apiDesc}
+            </p>
+          </motion.div>
+
+          <motion.div variants={itemVariants} className="glass p-6 rounded-2xl border border-slate-200 dark:border-white/5 flex flex-col gap-3 card-hover shadow-sm bg-gradient-to-b from-white dark:from-darkCard to-transparent">
+            <div className="w-10 h-10 rounded-xl bg-accentIndigo/10 text-accentIndigo flex items-center justify-center font-bold">
+              <Database className="w-5 h-5" />
+            </div>
+            <h4 className="font-display font-bold text-base text-slate-800 dark:text-white mt-1">
+              {t.about.cards.dbTitle}
+            </h4>
+            <p className="text-xs sm:text-sm text-slate-500 dark:text-gray-400 leading-relaxed">
+              {t.about.cards.dbDesc}
+            </p>
+          </motion.div>
+
+          <motion.div variants={itemVariants} className="glass p-6 rounded-2xl border border-slate-200 dark:border-white/5 flex flex-col gap-3 card-hover shadow-sm bg-gradient-to-b from-white dark:from-darkCard to-transparent">
+            <div className="w-10 h-10 rounded-xl bg-cyan-400/10 text-cyan-400 flex items-center justify-center font-bold">
+              <Globe className="w-5 h-5" />
+            </div>
+            <h4 className="font-display font-bold text-base text-slate-800 dark:text-white mt-1">
+              {t.about.cards.realtimeTitle}
+            </h4>
+            <p className="text-xs sm:text-sm text-slate-500 dark:text-gray-400 leading-relaxed">
+              {t.about.cards.realtimeDesc}
+            </p>
+          </motion.div>
+        </motion.div>
+
+        {/* CV Section CTA Card */}
+        <motion.div
+          id="cv-section"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="glass p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-white/5 shadow-sm bg-gradient-to-b from-white dark:from-darkCard to-transparent"
+        >
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            {/* Title & Description */}
+            <div className="lg:col-span-6 space-y-4">
+              <h3 className="font-display font-bold text-2xl text-slate-800 dark:text-white flex items-center gap-2.5">
+                <FileText className="w-6 h-6 text-accentTeal" />
+                {t.about.cv.title}
+              </h3>
+              <p className="text-sm text-slate-650 dark:text-gray-300 leading-relaxed">
+                {t.about.cv.description}
+              </p>
+            </div>
+
+            {/* View / Download Actions */}
+            <div className="lg:col-span-6 flex justify-center">
+              {/* CV Card */}
+              <div className="p-5 rounded-xl bg-slate-100/50 dark:bg-slate-900 border border-slate-200 dark:border-white/10 flex flex-col justify-between gap-4 shadow-inner w-full max-w-sm">
+                <div className="flex items-center gap-2">
+                  <FileText className="w-5 h-5 text-accentTeal" />
+                  <span className="text-xs font-bold text-slate-800 dark:text-white uppercase tracking-wider block">
+                    {lang === 'vi' ? 'Sơ yếu lý lịch (CV)' : 'Curriculum Vitae (CV)'}
+                  </span>
+                </div>
+                <p className="text-xs text-slate-500 dark:text-gray-400">
+                  {lang === 'vi' 
+                    ? 'Tải xuống hoặc xem trực tiếp CV chi tiết (Bản tiếng Anh)' 
+                    : 'Download or view my detailed CV (English version)'}
+                </p>
+                <div className="flex gap-2">
+                  <a
+                    href="/cv/NguyenThanhHung_BackendDeveloper_CV.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-grow flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-lg bg-accentTeal hover:bg-accentTeal/90 text-white font-semibold text-xs shadow hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer text-center"
+                  >
+                    <Eye className="w-3.5 h-3.5" />
+                    <span>{lang === 'vi' ? 'Xem CV' : 'View CV'}</span>
+                  </a>
+                  <a
+                    href="/cv/NguyenThanhHung_BackendDeveloper_CV.pdf"
+                    download
+                    className="flex items-center justify-center px-3 py-2.5 rounded-lg border border-slate-200 dark:border-white/10 text-slate-700 dark:text-gray-300 bg-white dark:bg-white/5 hover:bg-slate-100 dark:hover:bg-white/10 transition-all cursor-pointer"
+                    title={lang === 'vi' ? 'Tải CV' : 'Download CV'}
+                  >
+                    <FileText className="w-4 h-4" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </motion.div>
 
         {/* Embedded Interactive PDF CV Viewer */}
@@ -143,7 +252,7 @@ const About = ({ lang, t }) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="glass p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-white/5 shadow-sm"
+          className="glass p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-white/5 shadow-sm mt-12"
         >
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-6">
             <div>
@@ -195,8 +304,8 @@ const About = ({ lang, t }) => {
             <iframe
               src={
                 cvViewerLang === 'vi'
-                  ? '/NguyenThanhHung_SoftwareEngineer_CV_vie.pdf#toolbar=0'
-                  : '/NguyenThanhHung_SoftwareEngineer_CV.pdf#toolbar=0'
+                  ? '/cv/NguyenThanhHung_BackendDeveloper_CV_VI.pdf#toolbar=0'
+                  : '/cv/NguyenThanhHung_BackendDeveloper_CV.pdf#toolbar=0'
               }
               className="w-full h-[500px] sm:h-[700px] lg:h-[850px] bg-white rounded-xl relative z-10"
               title="Nguyen Thanh Hung PDF CV"
@@ -204,7 +313,7 @@ const About = ({ lang, t }) => {
             {/* Direct download helper in bottom right */}
             <div className="absolute bottom-4 right-4 z-20">
               <a
-                href={cvViewerLang === 'vi' ? '/NguyenThanhHung_SoftwareEngineer_CV_vie.pdf' : '/NguyenThanhHung_SoftwareEngineer_CV.pdf'}
+                href={cvViewerLang === 'vi' ? '/cv/NguyenThanhHung_BackendDeveloper_CV_VI.pdf' : '/cv/NguyenThanhHung_BackendDeveloper_CV.pdf'}
                 download
                 className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-slate-900/90 text-white font-semibold text-xs hover:bg-slate-800 shadow-lg backdrop-blur transition-all"
               >
@@ -230,7 +339,7 @@ const About = ({ lang, t }) => {
             </div>
             <div className="flex flex-col gap-2.5 pt-2">
               <a
-                href={cvViewerLang === 'vi' ? '/NguyenThanhHung_SoftwareEngineer_CV_vie.pdf' : '/NguyenThanhHung_SoftwareEngineer_CV.pdf'}
+                href={cvViewerLang === 'vi' ? '/cv/NguyenThanhHung_BackendDeveloper_CV_VI.pdf' : '/cv/NguyenThanhHung_BackendDeveloper_CV.pdf'}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-gradient-to-r from-accentTeal to-accentIndigo text-white font-semibold text-xs shadow-md shadow-accentTeal/10"
@@ -239,12 +348,12 @@ const About = ({ lang, t }) => {
                 <span>{lang === 'vi' ? 'Mở xem trực tiếp PDF' : 'Open PDF Viewer'}</span>
               </a>
               <a
-                href={cvViewerLang === 'vi' ? '/NguyenThanhHung_SoftwareEngineer_CV_vie.pdf' : '/NguyenThanhHung_SoftwareEngineer_CV.pdf'}
+                href={cvViewerLang === 'vi' ? '/cv/NguyenThanhHung_BackendDeveloper_CV_VI.pdf' : '/cv/NguyenThanhHung_BackendDeveloper_CV.pdf'}
                 download
                 className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/5 text-slate-700 dark:text-gray-300 font-semibold text-xs transition-colors"
               >
                 <FileText className="w-4 h-4" />
-                <span>{lang === 'vi' ? 'Tải CV về máy (English)' : 'Download CV (English)'}</span>
+                <span>{lang === 'vi' ? 'Tải CV về máy' : 'Download CV'}</span>
               </a>
             </div>
           </div>

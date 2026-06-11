@@ -9,6 +9,8 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { translations } from './translations';
+import BrandLogo from './components/BrandLogo';
+
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -55,14 +57,14 @@ function App() {
             exit={{ opacity: 0, transition: { duration: 0.5, ease: 'easeInOut' } }}
             className="fixed inset-0 bg-[#0f172a] z-[9999] flex flex-col items-center justify-center"
           >
-            {/* Glowing H */}
+            {/* Glowing Logo */}
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.5, ease: 'easeOut' }}
-              className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-tr from-accentTeal to-accentIndigo flex items-center justify-center font-display font-bold text-white text-3xl sm:text-4xl shadow-2xl shadow-accentTeal/30 relative"
+              className="relative"
             >
-              H
+              <BrandLogo className="w-16 h-16 sm:w-20 sm:h-20" />
               {/* Outer pulsing ring */}
               <span className="absolute inset-0 rounded-2xl bg-accentTeal/20 animate-ping pointer-events-none" />
             </motion.div>

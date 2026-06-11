@@ -1,44 +1,46 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code2, Server, Database, Network, Layout, Sparkles } from 'lucide-react';
+import { Server, Database, Network, Layout, Terminal } from 'lucide-react';
 
 const Skills = ({ lang, t }) => {
   const skillCategories = [
     {
-      title: t.skills.categories.architecture,
-      icon: <Network className="w-6 h-6 text-orange-500 dark:text-orange-400" />,
-      skills: ['Microservices', 'API Gateway', 'Docker', 'Docker Compose', 'SignalR', 'RabbitMQ', 'Kafka', 'WebSocket', 'Socket.io'],
-      color: 'from-orange-500/10 to-transparent'
-    },
-    {
       title: t.skills.categories.backend,
-      icon: <Server className="w-6 h-6 text-accentIndigo" />,
-      skills: ['.NET Core Web API', 'Node.js', 'FastAPI', 'RESTful API'],
-      color: 'from-accentIndigo/20 to-transparent'
-    },
-    {
-      title: t.skills.categories.programming,
-      icon: <Code2 className="w-6 h-6 text-accentTeal" />,
-      skills: ['C#', 'Python', 'SQL', 'TypeScript', 'JavaScript'],
-      color: 'from-accentTeal/20 to-transparent'
+      icon: <Server className="w-6 h-6 text-accentTeal animate-pulse" />,
+      skills: ['C#', 'ASP.NET Core Web API', 'RESTful API', 'SQL', 'Business Logic Implementation'],
+      color: 'border-accentTeal/30 dark:border-accentTeal/20 shadow-accentTeal/5',
+      isCore: true,
+      badge: lang === 'vi' ? 'Trọng tâm' : 'Core Focus'
     },
     {
       title: t.skills.categories.db,
-      icon: <Database className="w-6 h-6 text-emerald-555 text-emerald-500 dark:text-emerald-400" />,
-      skills: ['SQL Server', 'PostgreSQL', 'MySQL', 'Redis', 'Entity Framework Core'],
-      color: 'from-emerald-500/10 to-transparent'
+      icon: <Database className="w-6 h-6 text-emerald-500 dark:text-emerald-400" />,
+      skills: ['MySQL', 'SQL Server', 'PostgreSQL', 'Redis', 'linq2db', 'Database Design'],
+      color: 'border-emerald-500/30 dark:border-emerald-500/20 shadow-emerald-500/5',
+      isCore: true,
+      badge: lang === 'vi' ? 'Trọng tâm' : 'Core Focus'
     },
     {
-      title: t.skills.categories.aiTools,
-      icon: <Sparkles className="w-6 h-6 text-purple-500 dark:text-purple-400" />,
-      skills: ['Gemini API', 'Dify API', 'OCR', 'Tesseract', 'Git', 'Postman', 'Swagger', 'AI Coding Assistants'],
-      color: 'from-purple-500/10 to-transparent'
+      title: t.skills.categories.architecture,
+      icon: <Network className="w-6 h-6 text-accentIndigo" />,
+      skills: ['SignalR', 'WebSocket', 'Kafka', 'RabbitMQ'],
+      color: 'border-accentIndigo/30 dark:border-accentIndigo/20 shadow-accentIndigo/5',
+      isCore: true,
+      badge: lang === 'vi' ? 'Trọng tâm' : 'Core Focus'
     },
     {
       title: t.skills.categories.frontend,
       icon: <Layout className="w-6 h-6 text-pink-500 dark:text-pink-400" />,
-      skills: ['ReactJS', 'Next.js', 'Vite'],
-      color: 'from-pink-500/10 to-transparent'
+      skills: ['JavaScript/TypeScript', 'ReactJS', 'Next.js', 'FastAPI', 'Node.js'],
+      color: 'border-slate-200 dark:border-white/5 shadow-sm',
+      isCore: false
+    },
+    {
+      title: t.skills.categories.tools,
+      icon: <Terminal className="w-6 h-6 text-purple-500 dark:text-purple-400" />,
+      skills: ['Git', 'Docker', 'Swagger', 'Postman', 'Visual Studio', 'VS Code', 'AI-assisted coding tools'],
+      color: 'border-slate-200 dark:border-white/5 shadow-sm',
+      isCore: false
     }
   ];
 
@@ -90,17 +92,35 @@ const Skills = ({ lang, t }) => {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="glass p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-white/5 flex flex-col justify-between card-hover shadow-sm"
+              className={`glass p-6 sm:p-8 rounded-2xl border ${category.color} flex flex-col justify-between card-hover relative overflow-hidden ${
+                category.isCore 
+                  ? 'lg:col-span-1 ring-1 ring-slate-100/10 dark:ring-white/5' 
+                  : 'lg:col-span-1'
+              }`}
             >
+              {/* Highlight background gradient for core skills */}
+              {category.isCore && (
+                <div className="absolute -top-10 -right-10 w-24 h-24 bg-gradient-to-br from-accentTeal/5 to-accentIndigo/5 rounded-full blur-xl pointer-events-none" />
+              )}
+
               <div>
                 {/* Category Header */}
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="p-3 rounded-xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 shadow-inner">
-                    {category.icon}
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center gap-4">
+                    <div className="p-3 rounded-xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 shadow-inner">
+                      {category.icon}
+                    </div>
+                    <h3 className="font-display font-bold text-base sm:text-lg text-slate-800 dark:text-white">
+                      {category.title}
+                    </h3>
                   </div>
-                  <h3 className="font-display font-bold text-base sm:text-lg text-slate-850 dark:text-white">
-                    {category.title}
-                  </h3>
+
+                  {/* Core badge */}
+                  {category.isCore && (
+                    <span className="text-[9px] font-bold text-accentTeal bg-accentTeal/10 border border-accentTeal/20 px-2 py-0.5 rounded-full uppercase tracking-wider">
+                      {category.badge}
+                    </span>
+                  )}
                 </div>
 
                 {/* Skill tags */}
@@ -108,7 +128,11 @@ const Skills = ({ lang, t }) => {
                   {category.skills.map((skill, sIdx) => (
                     <span
                       key={sIdx}
-                      className="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-white/5 border border-slate-200/60 dark:border-white/5 hover:border-accentTeal/20 hover:bg-accentTeal/5 text-slate-700 dark:text-gray-300 text-xs font-semibold tracking-wide transition-all duration-200"
+                      className={`px-3 py-1.5 rounded-lg text-xs font-semibold tracking-wide transition-all duration-200 ${
+                        category.isCore
+                          ? 'bg-slate-100/80 dark:bg-white/5 border border-slate-200 dark:border-white/10 hover:border-accentTeal/30 hover:bg-accentTeal/5 text-slate-800 dark:text-gray-200 font-bold'
+                          : 'bg-slate-100 dark:bg-white/5 border border-slate-200/50 dark:border-white/5 text-slate-800 dark:text-gray-200'
+                      }`}
                     >
                       {skill}
                     </span>

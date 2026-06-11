@@ -36,10 +36,8 @@ const Contact = ({ lang, t }) => {
             {t.contact.title}
           </h2>
           <div className="h-1 w-20 bg-gradient-to-r from-accentTeal to-accentIndigo mx-auto rounded-full" />
-          <p className="text-slate-500 dark:text-gray-400 mt-4 text-sm sm:text-base">
-            {lang === 'vi' 
-              ? 'Thông tin liên hệ trực tiếp với tôi. Cảm ơn bạn đã ghé thăm trang web!' 
-              : 'Direct contact information. Thank you for visiting my portfolio!'}
+          <p className="text-slate-500 dark:text-gray-405 dark:text-gray-400 mt-4 text-sm sm:text-base font-medium">
+            {t.contact.subtitle}
           </p>
         </div>
 
@@ -156,7 +154,7 @@ const Contact = ({ lang, t }) => {
                 <span className="text-xs font-bold text-slate-500 dark:text-gray-500 uppercase tracking-widest block">
                   {t.contact.addressLabel}
                 </span>
-                <span className="text-sm sm:text-base lg:text-[13px] xl:text-base font-semibold text-slate-800 dark:text-gray-250 dark:text-gray-200 block mt-2 leading-relaxed">
+                <span className="text-sm sm:text-base lg:text-[13px] xl:text-base font-semibold text-slate-800 dark:text-gray-200 block mt-2 leading-relaxed">
                   {t.contact.addressVal}
                 </span>
               </div>
